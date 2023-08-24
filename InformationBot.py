@@ -5,7 +5,7 @@ bot = telebot.TeleBot('6607352864:AAEphPnsSaaa8zMXRBV097S_pNuVqCrXc4A')
 
 @bot.message_handler(commands=['start'])
 def start(message):
-    bot.reply_to(message.chat.id, f('Hello {message.from_user.first_name}!'))
+    bot.reply_to(message.chat.id, f'Hello {message.from_user.first_name}!')
 
 @bot.message_handler(commands=['info'])
 def info(message):
