@@ -27,7 +27,11 @@ async def info(message):
             f"<b>ID</b>: <code>{message.from_user.id}</code>",
             parse_mode='html'
         )
-asyncio.run(info)
+        
+async def main():
+    await info()
+    
+asyncio.run(main)
 
     
 bot.infinity_polling()
