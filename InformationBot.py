@@ -29,7 +29,7 @@ def id(message):
         parse_mode='html'
     )
 
-@bot.message_handler(commands='help'])
+@bot.message_handler(commands=['help'])
 def help(message):
     bot.reply_to(message.chat.id,
         f'/name <b>- shows your first name and last name</b>'
