@@ -1,4 +1,5 @@
 import telebot
+import datetime
 
 bot = telebot.TeleBot('6607352864:AAEphPnsSaaa8zMXRBV097S_pNuVqCrXc4A')
 
@@ -33,13 +34,22 @@ def id(message):
 def version(message):
     bot.send_message(message.chat.id, f"<b>Bot version:</b> <code>1.0.0</code>", parse_mode='html')
 
+@bot.message_handler(commands=['ping'])
+def ping(message):
+    start = datetime.datetime.now()
+    end = datetime.datetime.now()
+    pong = (end-start).microseconds / 1000
+    pinging = f"**{pong}**"
+    bot.send_message(message.chat.id, f'<b>Bot ping:</b> <code>{pong}</code>', parse_mode='html')
+
 @bot.message_handler(commands=['help'])
 def help(message):
     bot.send_message(message.chat.id,
         f'/name <b>- shows your first name and last name</b>\n'
         f'/uname <b>- shows your username</b>\n'
         f'/id <b>- shows your id</b>\n'
-        f'/version <b>- shows bot version</b>\n,
+        f'/version <b>- shows bot version</b>\n'
+        f'/ping <b>- shows bot ping</b>',
         parse_mode='html'
     )
 
