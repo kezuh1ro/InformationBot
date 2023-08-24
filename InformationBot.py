@@ -7,7 +7,7 @@ bot = telebot.TeleBot('6607352864:AAEphPnsSaaa8zMXRBV097S_pNuVqCrXc4A')
 
 @bot.message_handler(commands=['start'])
 def start(message):
-    markup = ReplyKeyboardMarkup()
+    markup = types.ReplyKeyboardMarkup()
     btn1 = types.KeyboardButton('/help')
     btn2 = types.KeyboardButton('/name')
     btn3 = types.KeyboardButton('/uname')
