@@ -32,9 +32,9 @@ def id(message):
 @bot.message_handler(commands=['help'])
 def help(message):
     bot.send_message(message.chat.id,
-        f'/name <b>- shows your first name and last name</b>'
-        f'/uname <b>- shows your username</b>'
-        f'/id <b>- shows your id</b>',
+        f'/name <b>- shows your first name and last name</b>\n'
+        f'/uname <b>- shows your username</b>\n'
+        f'/id <b>- shows your id</b>\n',
         parse_mode='html'
     )
 
