@@ -16,7 +16,7 @@ def start(message):
     btn6 = types.KeyboardButton('/version')
     markup.row(btn2, btn3, btn4)
     markup.row(btn1, btn5, btn6)
-    bot.reply_to(message, f'<b>Hello</b> {message.from_user.first_name}<b>!</b>\n\n/help <b>- shows all commands</b>', parse_mode='html')
+    bot.reply_to(message, f'<b>Hello</b> {message.from_user.first_name}<b>!</b>\n\n/help <b>- shows all commands</b>', reply_markup=markup, parse_mode='html')
 
 @bot.message_handler(commands=['name'])
 def name(message):
