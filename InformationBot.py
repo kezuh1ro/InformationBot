@@ -7,7 +7,6 @@ bot = telebot.TeleBot('6607352864:AAEphPnsSaaa8zMXRBV097S_pNuVqCrXc4A')
 
 @bot.message_handler(commands=['start'])
 def start(message):
-    bot.reply_to(message, f'<b>Hello</b> {message.from_user.first_name}<b>!</b>\n\n/help <b>- shows all commands</b>', parse_mode='html')
     markup = ReplyKeyboardMarkup()
     btn1 = types.KeyboardButton('/help')
     btn2 = types.KeyboardButton('/name')
@@ -17,6 +16,7 @@ def start(message):
     btn6 = types.KeyboardButton('/version')
     markup.row(btn2, btn3, btn4)
     markup.row(btn1, btn5, btn6)
+    bot.reply_to(message, f'<b>Hello</b> {message.from_user.first_name}<b>!</b>\n\n/help <b>- shows all commands</b>', parse_mode='html')
 
 @bot.message_handler(commands=['name'])
 def name(message):
