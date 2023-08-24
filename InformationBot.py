@@ -38,7 +38,7 @@ def version(message):
 def ping(message):
     start = datetime.datetime.now()
     end = datetime.datetime.now()
-    pong = (end-start).microseconds / 1000
+    pong = (end-start).microseconds / 10
     pinging = f"**{pong}**"
     bot.send_message(message.chat.id, f'<b>Bot ping:</b> <code>{pong}</code>', parse_mode='html')
 
