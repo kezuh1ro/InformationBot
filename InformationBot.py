@@ -43,10 +43,6 @@ def ping(message):
     pinging = f"**{pong}**"
     bot.send_message(message.chat.id, f'<b>Bot ping:</b> <code>{pong}</code>', parse_mode='html')
 
-@bot.message_handler(commands=['source'])
-def source(message):
-    webbrowser.open('https://github.com/kezuh1ro/InformationBot/blob/main/InformationBot.py')
-
 @bot.message_handler(commands=['help'])
 def help(message):
     bot.send_message(message.chat.id,
@@ -55,7 +51,8 @@ def help(message):
         f'/id <b>- shows your id</b>\n'
         f'/version <b>- shows bot version</b>\n'
         f'/ping <b>- shows bot ping</b>\n\n'
-        f'<b>Bot creator:</b> <code>@poslan1e</code>, <code>@p0slan1e</code>',
+        f'<b>Bot creator:</b> <code>@poslan1e</code>, <code>@p0slan1e</code>'
+        f'<b>Source:</b> https://github.com/kezuh1ro/InformationBot/blob/main/InformationBot.py',
         parse_mode='html'
     )
 
