@@ -5,7 +5,7 @@ bot = telebot.TeleBot('6607352864:AAEphPnsSaaa8zMXRBV097S_pNuVqCrXc4A')
 
 @bot.message_handler(commands=['start'])
 def start(message):
-    bot.send_message(message.chat.id, f'<b>Hello</b> {message.from_user.first_name}<b>!</b>\n/help <b>- shows all commands</b>', parse_mode='html')
+    bot.send_message(message.chat.id, f'<b>Hello</b> {message.from_user.first_name}<b>!</b>\n\n/help <b>- shows all commands</b>', parse_mode='html')
 
 @bot.message_handler(commands=['name'])
 def name(message):
@@ -29,12 +29,17 @@ def id(message):
         parse_mode='html'
     )
 
+@bot.message_handler(commands=['version'])
+def version(message):
+    bot.send_message(message.chat.id, f"<b>Bot version:</b> <code>1.0.0</code>", parse_mode='html')
+
 @bot.message_handler(commands=['help'])
 def help(message):
     bot.send_message(message.chat.id,
         f'/name <b>- shows your first name and last name</b>\n'
         f'/uname <b>- shows your username</b>\n'
-        f'/id <b>- shows your id</b>\n',
+        f'/id <b>- shows your id</b>\n'
+        f'/version <b>- shows bot version</b>\n,
         parse_mode='html'
     )
 
