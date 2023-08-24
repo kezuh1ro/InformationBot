@@ -1,6 +1,5 @@
 import telebot
 import datetime
-import webbrowser
 
 bot = telebot.TeleBot('6607352864:AAEphPnsSaaa8zMXRBV097S_pNuVqCrXc4A')
 
