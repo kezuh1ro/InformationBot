@@ -13,7 +13,8 @@ def info(message):
         f"<b>First Name:</b> {message.from_user.first_name or 'None'}\n"
         f"<b>Last Name</b>: {message.from_user.first_name or 'None'}\n"
         f"<b>Username</b>: @{message.from_user.username or 'None'}\n"
-        f"<b>ID</b>: <code>{message.from_user.id}</code>"
+        f"<b>ID</b>: <code>{message.from_user.id}</code>",
+        parse_mode='html'
     )
     
     
