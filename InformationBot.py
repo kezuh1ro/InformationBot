@@ -48,7 +48,7 @@ def version(message):
 def ping(message):
     start = datetime.datetime.now()
     end = datetime.datetime.now()
-    pong = (start-end).microseconds / 10000
+    pong = (end-start).microseconds / 0.1
     pinging = f"**{pong}**"
     bot.reply_to(message, f'<b>Bot ping:</b> <code>{pong}</code> ms', parse_mode='html')
 
