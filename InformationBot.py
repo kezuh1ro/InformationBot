@@ -1,5 +1,6 @@
 import telebot
 import datetime
+import webbrowser
 
 bot = telebot.TeleBot('6607352864:AAEphPnsSaaa8zMXRBV097S_pNuVqCrXc4A')
 
@@ -42,6 +43,9 @@ def ping(message):
     pinging = f"**{pong}**"
     bot.send_message(message.chat.id, f'<b>Bot ping:</b> <code>{pong}</code>', parse_mode='html')
 
+@bot.message_handler(commands=['source'])
+def source(message):
+    webbrowser.open('http
 @bot.message_handler(commands=['help'])
 def help(message):
     bot.send_message(message.chat.id,
