@@ -12,10 +12,9 @@ def start(message):
     btn2 = types.KeyboardButton('/name')
     btn3 = types.KeyboardButton('/uname')
     btn4 = types.KeyboardButton('/id')
-    btn5 = types.KeyboardButton('/ping')
-    btn6 = types.KeyboardButton('/version')
+    btn5 = types.KeyboardButton('/version')
     markup.row(btn2, btn3, btn4)
-    markup.row(btn1, btn5, btn6)
+    markup.row(btn1, btn5)
     bot.reply_to(message, f'<b>Hello</b> {message.from_user.first_name}<b>!</b>\n\n/help <b>- shows all commands</b>', reply_markup=markup, parse_mode='html')
 
 @bot.message_handler(commands=['name'])
@@ -43,14 +42,6 @@ def id(message):
 @bot.message_handler(commands=['version'])
 def version(message):
     bot.reply_to(message, f"<b>Bot version:</b> <code>1.0.1</code>", parse_mode='html')
-
-@bot.message_handler(commands=['ping'])
-def ping(message):
-    start = datetime.datetime.now()
-    end = datetime.datetime.now()
-    pong = (end-start).microseconds / 0.1
-    pinging = f"**{pong}**"
-    bot.reply_to(message, f'<b>Bot ping:</b> <code>{pong}</code> ms', parse_mode='html')
 
 @bot.message_handler(commands=['help'])
 def help(message):
