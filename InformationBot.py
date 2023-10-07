@@ -49,7 +49,6 @@ def help(message):
         f'/name <b>- shows your first name and last name</b>\n'
         f'/uname <b>- shows your username</b>\n'
         f'/id <b>- shows your id</b>\n'
-        f'/ping <b>- shows bot ping</b>\n'
         f'/version <b>- shows bot version</b>\n\n'
         f'<b>Bot creator:</b> <code>@psychxlxgic</code>\n'
         f"<b><a href='https://github.com/kezuh1ro/InformationBot/blob/main/InformationBot.py'>Source</a></b>",
