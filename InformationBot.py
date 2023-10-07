@@ -60,8 +60,8 @@ def help(message):
         f'/id <b>- shows your id</b>\n'
         f'/ping <b>- shows bot ping</b>\n'
         f'/version <b>- shows bot version</b>\n\n'
-        f'<b>Bot creator:</b> <code>@poslan1e</code>, <code>@p0slan1e</code>\n'
-        f'<b>Source:</b> https://github.com/kezuh1ro/InformationBot/blob/main/InformationBot.py',
+        f'<b>Bot creator:</b> <code>@psychxlxgic</code>\n'
+        f"<b><a href='https://github.com/kezuh1ro/InformationBot/blob/main/InformationBot.py'>Source</a></b>",
         parse_mode='html'
     )
 
